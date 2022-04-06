@@ -2,7 +2,7 @@ import Component from '@glint/environment-ember-loose/glimmer-component';
 
 export interface ExampleComponentSignature {
   Args: {
-    'exampleArg': string;
+    'example-arg': string;
   };
 }
 
