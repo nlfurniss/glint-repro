@@ -1,56 +1,28 @@
 # glint-repro
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This [commit](https://github.com/nlfurniss/glint-repro/commit/f2f9e9b25a0c4490652251d289c8b841cf00cddc#diff-914a242ea234b16c9250b91198c73155c49883d006040a778c107cd7fe829547) contains code that passes, this [commit](https://github.com/nlfurniss/glint-repro/commit/a340b6fdd30a55262d31dae8b6dcb68137afedd7#diff-914a242ea234b16c9250b91198c73155c49883d006040a778c107cd7fe829547) contains code that fails
 
-## Prerequisites
+```sh
+$ yarn glint
 
-You will need the following things properly installed on your computer.
+app/components/example-component.hbs:2:20 - error TS2304: Cannot find name 'arg'.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+2   You passed in {{@example-arg}}
+                     ~~~~~~~~~~~
+
+app/components/example-component.hbs:2:20 - error TS2339: Property 'example' does not exist on type '{ 'example-arg': string; }'.
+
+2   You passed in {{@example-arg}}
+                     ~~~~~~~~~~~
+```
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/nlfurniss/glint-repro.git` this repository
 * `cd glint-repro`
-* `npm install`
+* `yarn install`
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
